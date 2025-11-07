@@ -4,8 +4,8 @@ USE airline_db;
 -- Insert Admin and Sample Users (password: admin123 and user123 hashed with BCrypt)
 INSERT INTO users (username, password_hash, full_name, email, phone, role) VALUES
 ('admin', '$2a$10$X7d2K5Z8n0FKzHjGH7YGS.rN0l5U9cQ8LrYJQz5sK2aYRZY8YJzIK', 'System Administrator', 'admin@airline.com', '1234567890', 'ADMIN'),
-('john_doe', '$2a$10$Y8e3L6A9o1GLAiKjI8ZHT.sO1m6V0dR9MsZKRa6tL3bZSaZ9ZKaJL', 'John Doe', 'john@email.com', '9876543210', 'CUSTOMER'),
-('jane_smith', '$2a$10$Y8e3L6A9o1GLAiKjI8ZHT.sO1m6V0dR9MsZKRa6tL3bZSaZ9ZKaJL', 'Jane Smith', 'jane@email.com', '9876543211', 'CUSTOMER');
+('abc def', '$2a$10$Y8e3L6A9o1GLAiKjI8ZHT.sO1m6V0dR9MsZKRa6tL3bZSaZ9ZKaJL', 'Abc Def', 'abc@email.com', '1234567890', 'CUSTOMER'),
+('pqr xyz', '$2a$10$Y8e3L6A9o1GLAiKjI8ZHT.sO1m6V0dR9MsZKRa6tL3bZSaZ9ZKaJL', 'Pqr Xyz', 'pqr@email.com', '0987654321', 'CUSTOMER');
 
 -- Insert Airlines
 INSERT INTO airlines (airline_code, airline_name, country) VALUES
