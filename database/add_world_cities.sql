@@ -1,6 +1,3 @@
--- Add 50+ major cities from around the world
-
--- Insert more airports (cities)
 INSERT INTO airports (airport_code, airport_name, city, country) VALUES
 -- Asia
 ('BKK', 'Suvarnabhumi Airport', 'Bangkok', 'Thailand'),
@@ -75,7 +72,7 @@ INSERT INTO airports (airport_code, airport_name, city, country) VALUES
 ('MEL', 'Melbourne Airport', 'Melbourne', 'Australia'),
 ('AKL', 'Auckland Airport', 'Auckland', 'New Zealand');
 
--- Add more airlines
+-- Airlines
 INSERT INTO airlines (airline_code, airline_name, country) VALUES
 ('SQ', 'Singapore Airlines', 'Singapore'),
 ('CX', 'Cathay Pacific', 'Hong Kong'),
@@ -93,7 +90,7 @@ INSERT INTO airlines (airline_code, airline_name, country) VALUES
 ('QF', 'Qantas', 'Australia'),
 ('NZ', 'Air New Zealand', 'New Zealand');
 
--- Add flights for major routes (100+ new flights)
+--Flights
 INSERT INTO flights (flight_number, airline_id, origin_airport_id, destination_airport_id, total_seats, base_price) VALUES
 -- India to Asia
 ('AI301', (SELECT airline_id FROM airlines WHERE airline_code = 'AI'), 1, (SELECT airport_id FROM airports WHERE airport_code = 'SIN'), 180, 25000.00),
@@ -163,6 +160,3 @@ INSERT INTO flights (flight_number, airline_id, origin_airport_id, destination_a
 ('QR302', (SELECT airline_id FROM airlines WHERE airline_code = 'QR'), (SELECT airport_id FROM airports WHERE airport_code = 'DOH'), (SELECT airport_id FROM airports WHERE airport_code = 'CDG'), 390, 36000.00),
 ('EY401', (SELECT airline_id FROM airlines WHERE airline_code = 'EY'), (SELECT airport_id FROM airports WHERE airport_code = 'AUH'), (SELECT airport_id FROM airports WHERE airport_code = 'LHR'), 435, 39000.00),
 ('TK901', (SELECT airline_id FROM airlines WHERE airline_code = 'TK'), (SELECT airport_id FROM airports WHERE airport_code = 'IST'), (SELECT airport_id FROM airports WHERE airport_code = 'LHR'), 240, 28000.00);
-
--- Note: Schedules will be added manually for the new flights as needed
--- You can add schedules through the admin interface or by running additional INSERT statements
