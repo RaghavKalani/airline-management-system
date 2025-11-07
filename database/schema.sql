@@ -1,11 +1,9 @@
 -- Airline Management System Database Schema
--- MySQL 8.x
-
 DROP DATABASE IF EXISTS airline_db;
 CREATE DATABASE airline_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE airline_db;
 
--- Users Table (for authentication)
+-- Users Table 
 CREATE TABLE users (
     user_id INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(50) UNIQUE NOT NULL,
